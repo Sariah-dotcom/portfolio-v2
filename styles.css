@@ -45,6 +45,19 @@ h1 {
     filter: opacity(50%);
 }
 
+/* Cursor Trail */
+.cursor-circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: #161A30;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999;
+}
+
 /* Navigation menu */
 
 .nav-logo img {
@@ -69,7 +82,7 @@ h1 {
   }
   
   .hamburger {
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
   }
   
@@ -88,7 +101,7 @@ h1 {
   }
   
   .close {
-    font-size: 1.5rem;
+    font-size: 3rem;
     cursor: pointer;
     text-align: right;
     margin-bottom: 1rem;
@@ -100,13 +113,13 @@ h1 {
   }
   
   .menu ul li {
-    margin: 1rem 0;
+    margin: 2rem 0;
   }
   
   .menu ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
   
   #hero {
@@ -120,6 +133,10 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .hero-decor {
+    display: none;
   }
   
   .hero-caption h1 {
@@ -143,7 +160,7 @@ h1 {
     gap: 0.5rem;
     position: absolute;
     right: 0;
-    top: 31rem;
+    top: 20rem;
 }
 
 /* About */
@@ -178,6 +195,7 @@ h1 {
 
 .grid {
   display: grid;
+  grid-template-columns: auto;
   gap: 2rem;
   padding: 1rem;
   place-items: center;
@@ -319,4 +337,197 @@ hr {
   width: 70%;
   background-color: #fff;
   border-radius: 1rem;
+}
+
+@media only screen and (max-width:375px) {
+  .icons {
+    margin-top: -8rem;
+  }
+}
+
+/* @media only screen and (max-width:560px)
+{
+  .hero-caption {
+   padding: 2rem;
+  }
+
+  .hero-caption h1 {
+    padding: 0rem 6rem;
+  }
+} */
+
+@media only screen and (min-width:768px) {
+  .nav-bar {
+    padding: 2rem;
+  }
+
+  .hamburger {
+    font-size: 2.5rem;
+  }
+
+  .nav-logo a img {
+    height: 4rem;
+    width: 9rem;
+  }
+
+  #hero {
+    height: 80vh;
+  }
+  .hero-caption h1 {
+    font-size: 6rem;
+  }
+
+  .hero-caption p {
+    font-size: 1.8rem;
+  }
+
+  .icons svg {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .icons {
+    margin-top: 12rem;
+    padding-right: 2rem;
+  }
+
+  .about-content p {
+    font-size: 1.5rem;
+  }
+
+  .skills-icons {
+    gap: 3rem;
+  }
+
+  .skills-icons svg {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .icon-labels {
+    gap: 4rem;
+    font-size: 1.4rem;
+  }
+
+  .section-title h1 {
+    font-size: 6rem;
+  }
+
+  .grid {
+    gap: 2rem;
+    grid-template-columns: auto auto;
+  }
+
+  .grid-item {
+    height: 30rem;
+    width: 20rem;
+    gap: 2rem;
+  }
+
+  .grid-item h3 {
+    font-size: 1.7rem;
+  }
+
+  .grid-item img {
+    height: 12rem;
+    width: 18rem;
+  }
+
+  .project-icons svg {
+    height: 2rem;
+    width: 2rem;
+  }
+
+}
+
+@media only screen and (max-width:1023px){
+  .hero-caption h1 {
+    font-size: 5rem;
+  }
+  .hero-caption p {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width:1024px) {
+
+  .hero-caption {
+    padding: 10rem;
+    text-align: left;
+  }
+
+  .hero-caption h1 {
+    font-size: 4rem;
+  }
+
+  .hero-caption p {
+    font-size: 1.2rem;
+    padding: 0rem;
+  }
+
+  .hero-content {
+    display: flex;
+    /* padding-left: 6rem; */
+    justify-content: center;
+  }
+
+  .hero-decor {
+    display: block;
+    position: absolute;
+    margin-top: 3rem;
+  }
+
+  .hero-decor img {
+    height: 18rem;
+    width: 16rem;
+  }
+
+  .icons {
+    margin-top: -1rem;
+  }
+
+  .icons svg {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .nav-logo a img {
+    height: 4rem;
+    width: 10rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .menu {
+   position: absolute;
+   padding-right: 2rem;
+   padding-top: 2.3rem;
+   right: 0;
+   height: 7rem;
+   width: 50%;
+   overflow: hidden;
+   background-color: #161A30;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .menu ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+  }
+
+  .menu ul li a {
+    font-size: 1.5rem;
+  }
+
+  .menu ul li a:hover {
+    color: #15F5BA;
+  }
+
+  
 }
