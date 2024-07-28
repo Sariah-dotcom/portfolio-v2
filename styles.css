@@ -56,6 +56,7 @@ h1 {
   left: 0;
   pointer-events: none;
   z-index: 99999999;
+  display: none;
 }
 
 /* Navigation menu */
@@ -294,20 +295,20 @@ form {
 }
 
 button {
-  height: 2.2rem;
-  width: 6rem;
+  height: 3rem;
+  width: 7rem;
   background-color: #B6BBC4;
   border: none;
   border-radius: 1rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #161A30;
+  margin: auto;
 }
 
 button:hover {
   background-color: #15F5BA;
   cursor: pointer;
 }
-
 
 
 /* Footer */
@@ -335,9 +336,11 @@ button:hover {
 
 hr {
   width: 70%;
-  background-color: #fff;
+  background-color: #B6BBC4;
   border-radius: 1rem;
 }
+
+
 
 @media only screen and (max-width:375px) {
   .icons {
@@ -417,6 +420,10 @@ hr {
     width: 2rem;
   }
 
+  .cursor-circle {
+    display:block;
+  }
+
 }
 
 @media only screen and (min-width:1024px) {
@@ -424,6 +431,10 @@ hr {
   .hero-caption {
     padding: 10rem;
     text-align: left;
+  }
+
+  .cursor-circle {
+    display: block;
   }
 
   .hero-caption h1 {
@@ -492,7 +503,5 @@ hr {
 
   .menu ul li a:hover {
     color: #15F5BA;
-  }
-
-  
+  } 
 }

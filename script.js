@@ -63,28 +63,6 @@ function animateCircles() {
 animateCircles();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Navigation menu
 document.getElementById('hamburger').addEventListener('click', function() {
     document.getElementById('menu').style.right = '0px';
@@ -94,7 +72,7 @@ document.getElementById('close').addEventListener('click', function() {
     document.getElementById('menu').style.right = '-250px';
 });
 
-/* Animations */
+/*Page Animations */
 const splitWord = document.querySelector('.split-word');
 const letters = splitWord.textContent.split("");
 splitWord.textContent = "";
@@ -218,3 +196,55 @@ tl.fromTo
     "<5%"
 
 );
+
+// Contact form animations
+const containers = document.querySelectorAll(".input-container");
+const form = document.querySelector("form");
+const tl6 = gsap.timeline({defualts: {duration:1}});
+
+//Line animation
+const start =  "M0 1.02495C0 1.02495 88.164 0.968806 146.524 1.02493C205.644 1.08179 300 1.02495 300 1.02495";
+const end = "M1 1.02493C1 1.02493 97.6399 14.4439 156 14.5C215.12 14.5569 301 1.02493 301 1.02493";
+
+containers.forEach(container =>{
+    const input = container.querySelector('.input');
+    const line  = container.querySelector('.elastic-line');
+    const placeholder = container.querySelector('.placeholder');
+
+    input.addEventListener('focus', ()=>{
+        if(!input.value){
+            tl6.fromTo(
+                line,
+                {
+                    attr:{d: start}
+                },
+                {
+                    attr:{d: end},
+                    duration: 0.75,
+                    ease: 'Power2.easeOut'
+                }
+            );
+
+            tl6.to(
+                line, 
+                {
+                    attr:{d: start},
+                    ease: "elastic.out(8,1.5)"
+                },
+                "<50%"
+            );
+
+            // Placeholder shift animation
+            tl6.to(
+                placeholder,
+                {
+                    top:-15,
+                    scale: 0.7,
+                    duration: 0.5,
+                    ease: "Power2.easeOut"
+                },
+                "<10%"
+            )
+        }
+    });
+});
